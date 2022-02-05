@@ -1,0 +1,20 @@
+{
+  "group": "bamboo_mat",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sbb",
+    "sbb"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:string"
+    },
+    "b": {
+      "item": "minecraft:bamboo"
+    }
+  },
+  "result": {
+    "item": "culturaldelights:bamboo_mat",
+    "count": 1
+  }
+}

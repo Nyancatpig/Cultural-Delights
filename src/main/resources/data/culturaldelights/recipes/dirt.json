@@ -1,0 +1,28 @@
+{
+  "type": "culturaldelights:mat_rolling",
+  "ingredients": [
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    }
+  ],
+  "output": [
+    {
+    "item": "minecraft:dirt"
+    },
+    {
+      "item": "minecraft:coal"
+    }
+  ]
+}
