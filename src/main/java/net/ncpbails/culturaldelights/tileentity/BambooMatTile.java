@@ -101,13 +101,21 @@ public class BambooMatTile extends TileEntity implements ITickableTileEntity {
 
 
     private void craftTheItem(ItemStack output) {
+        itemHandler.insertItem(5, output, false);
+        itemHandler.insertItem(6, output, false);
+    }
+
+    private void outcomeTaken(ItemStack output) {
         itemHandler.extractItem(0, 1, false);
         itemHandler.extractItem(1, 1, false);
         itemHandler.extractItem(2, 1, false);
         itemHandler.extractItem(3, 1, false);
         itemHandler.extractItem(4, 1, false);
-        itemHandler.insertItem(5, output, false);
-        itemHandler.insertItem(6, output, false);
+    }
+
+    private void ingredientTaken(ItemStack output) {
+        itemHandler.extractItem(5, 1, false);
+        itemHandler.extractItem(6, 1, false);
     }
 
     @Override

@@ -28,17 +28,17 @@ public class BambooMatContainer extends Container {
         playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);
 
-        layoutPlayerInventorySlots(8, 86);
+        layoutPlayerInventorySlots(8, 84);
 
         if(tileEntity != null) {
             tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h -> {
-                addSlot(new SlotItemHandler(h, 0, 39, 45));
-                addSlot(new SlotItemHandler(h, 1, 57, 45));
-                addSlot(new SlotItemHandler(h, 2, 30, 15));
-                addSlot(new SlotItemHandler(h, 3, 48, 15));
-                addSlot(new SlotItemHandler(h, 4, 65, 15));
-                addSlot(new SlotItemHandler(h, 5, 125, 15));
-                addSlot(new SlotItemHandler(h, 6, 125, 45));
+                addSlot(new SlotItemHandler(h, 0, 39, 46));
+                addSlot(new SlotItemHandler(h, 1, 57, 46));
+                addSlot(new SlotItemHandler(h, 2, 30, 22));
+                addSlot(new SlotItemHandler(h, 3, 48, 22));
+                addSlot(new SlotItemHandler(h, 4, 66, 22));
+                addSlot(new SlotItemHandler(h, 5, 129, 22));
+                addSlot(new SlotItemHandler(h, 6, 129, 46));
             });
         }
     }
