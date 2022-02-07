@@ -34,7 +34,6 @@ public class ModBlocks {
                     .sound(SoundType.BAMBOO)));
 
 
-
     //MAKE ITEMS FROM BLOCKS AUTOMATICALLY
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

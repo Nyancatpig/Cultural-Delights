@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "culturaldelights:cut_avocado"
+    },
+    {
+      "item": "culturaldelights:cut_avocado"
+    },
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "result": {
+    "item": "culturaldelights:avocado_toast"
+  }
+}
