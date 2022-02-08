@@ -70,6 +70,8 @@ public class CulturalDelights
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         RenderTypeLookup.setRenderLayer(ModBlocks.BAMBOO_MAT.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(ModBlocks.WILD_CUCUMBERS.get(), RenderType.getCutoutMipped());
+
 
         ScreenManager.registerFactory(ModContainers.BAMBOO_MAT_CONTAINER.get(), BambooMatScreen::new);
     }

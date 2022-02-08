@@ -13,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.ncpbails.culturaldelights.CulturalDelights;
 import net.ncpbails.culturaldelights.block.custom.BambooMatBlock;
+import net.ncpbails.culturaldelights.block.custom.WildCropsBlock;
 import net.ncpbails.culturaldelights.item.ModItemGroup;
 import net.ncpbails.culturaldelights.item.ModItems;
 
@@ -32,6 +33,11 @@ public class ModBlocks {
             () -> new BambooMatBlock(AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1f)
                     .sound(SoundType.BAMBOO)));
+
+    public static final RegistryObject<Block> WILD_CUCUMBERS = registerBlock("wild_cucumbers",
+            () -> new WildCropsBlock(AbstractBlock.Properties.create(Material.PLANTS)
+                    .harvestLevel(0).doesNotBlockMovement().notSolid().setOpaque((bs, br, bp) -> false).hardnessAndResistance(0f)
+                    .sound(SoundType.PLANT)));
 
 
     //MAKE ITEMS FROM BLOCKS AUTOMATICALLY
