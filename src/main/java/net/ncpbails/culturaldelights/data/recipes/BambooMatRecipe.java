@@ -5,10 +5,7 @@ import com.google.gson.JsonObject;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.IRecipeSerializer;
-import net.minecraft.item.crafting.IRecipeType;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.crafting.ShapedRecipe;
+import net.minecraft.item.crafting.*;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.JSONUtils;
 import net.minecraft.util.NonNullList;
@@ -16,6 +13,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.registries.ForgeRegistryEntry;
 import net.ncpbails.culturaldelights.block.ModBlocks;
+import net.ncpbails.culturaldelights.item.ModItems;
 
 import javax.annotation.Nullable;
 
@@ -35,16 +33,15 @@ public class BambooMatRecipe implements IBambooMatRecipe{
     @Override
     public boolean matches(IInventory inv, World worldIn) {
         // Checks for correct focus
-        if(recipeItems.get(0).test(inv.getStackInSlot(0))) {
-            if(recipeItems.get(1).test(inv.getStackInSlot(1))) {
-                if(recipeItems.get(2).test(inv.getStackInSlot(2))) {
-                    if(recipeItems.get(3).test(inv.getStackInSlot(3))) {
-                        return recipeItems.get(4).test(inv.getStackInSlot(4));
+            if(recipeItems.get(0).test(inv.getStackInSlot(0))) {
+                if(recipeItems.get(1).test(inv.getStackInSlot(1))) {
+                    if(recipeItems.get(2).test(inv.getStackInSlot(2))) {
+                        if(recipeItems.get(3).test(inv.getStackInSlot(3))) {
+                            return recipeItems.get(4).test(inv.getStackInSlot(4));
+                        }
                     }
                 }
             }
-        }
-
         return false;
     }
 

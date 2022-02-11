@@ -6,6 +6,7 @@
   "item.culturaldelights.cucumber": "Cucumber",
   "item.culturaldelights.pickle": "Pickle",
   "item.culturaldelights.cut_cucumber": "Cut Cucumber",
+  "item.culturaldelights.eggplant": "Eggplant",
   "item.culturaldelights.avocado_toast": "Avocado Toast",
   "item.culturaldelights.avocado_sushi": "Avocado Sushi",
   "item.culturaldelights.cucumber_sushi": "Cucumber Sushi",
@@ -23,6 +24,10 @@
   "block.culturaldelights.avocado_bundle": "Avocado Bundle",
   "block.culturaldelights.bamboo_mat": "Bamboo Mat",
   "block.culturaldelights.wild_cucumbers": "Wild Cucumbers",
+  "block.culturaldelights.avocado_log": "Avocado Log",
+  "block.culturaldelights.avocado_wood": "Avocado Wood",
+  "block.culturaldelights.avocado_leaves": "Avocado Leaves",
+  "block.culturaldelights.avocado_sapling": "Avocado Sapling",
 
   "screen.culturaldelights.bamboo_mat": "Bamboo Mat"
 }

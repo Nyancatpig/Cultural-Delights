@@ -1,10 +1,12 @@
 package net.ncpbails.culturaldelights;
 
+import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.item.AxeItem;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,7 +24,6 @@ import net.ncpbails.culturaldelights.container.ModContainers;
 import net.ncpbails.culturaldelights.data.recipes.ModRecipeTypes;
 import net.ncpbails.culturaldelights.item.ModItems;
 import net.ncpbails.culturaldelights.screen.BambooMatScreen;
-import net.ncpbails.culturaldelights.tileentity.BambooMatTile;
 import net.ncpbails.culturaldelights.tileentity.ModTileEntities;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -62,15 +63,19 @@ public class CulturalDelights
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        event.enqueueWork(() -> {
+            AxeItem.BLOCK_STRIPPING_MAP = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.BLOCK_STRIPPING_MAP)
+                .put(ModBlocks.AVOCADO_LOG.get(), Blocks.STRIPPED_JUNGLE_LOG)
+                .put(ModBlocks.AVOCADO_WOOD.get(), Blocks.STRIPPED_JUNGLE_WOOD).build();
+        });
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         RenderTypeLookup.setRenderLayer(ModBlocks.BAMBOO_MAT.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.WILD_CUCUMBERS.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(ModBlocks.AVOCADO_LEAVES.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(ModBlocks.AVOCADO_SAPLING.get(), RenderType.getCutoutMipped());
 
 
         ScreenManager.registerFactory(ModContainers.BAMBOO_MAT_CONTAINER.get(), BambooMatScreen::new);

@@ -19,18 +19,24 @@ public class ModItems {
     //Items                                                                  item id
     public static final RegistryObject<Item> AVOCADO = ITEMS.register("avocado", () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP)));
 
-    //FOOD
+    //Foods
     public static final RegistryObject<Item> CUT_AVOCADO = ITEMS.register("cut_avocado",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(3).saturation(0.4f).build() )));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(2).saturation(0.4f).build() )));
 
     public static final RegistryObject<Item> CUCUMBER = ITEMS.register("cucumber",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(4).saturation(0.8f).build() )));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(2).saturation(0.5f).build() )));
 
     public static final RegistryObject<Item> PICKLE = ITEMS.register("pickle",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(4).saturation(0.8f).build() )));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(4).saturation(0.6f).build() )));
 
     public static final RegistryObject<Item> CUT_CUCUMBER = ITEMS.register("cut_cucumber",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(2).saturation(0.4f).fastToEat().build() )));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(1).saturation(0.2f).fastToEat().build() )));
+
+    public static final RegistryObject<Item> EGGPLANT = ITEMS.register("eggplant",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(4).saturation(0.8f).build() )));
+
+    public static final RegistryObject<Item> WHITE_EGGPLANT = ITEMS.register("white_eggplant",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(2).saturation(0.4f).build() )));
 
     public static final RegistryObject<Item> AVOCADO_TOAST = ITEMS.register("avocado_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(8).saturation(1f).build() )));

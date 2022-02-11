@@ -38,7 +38,6 @@ public class BambooMatContainer extends Container {
                 addSlot(new SlotItemHandler(h, 3, 48, 22));
                 addSlot(new SlotItemHandler(h, 4, 66, 22));
                 addSlot(new SlotItemHandler(h, 5, 129, 22));
-                addSlot(new SlotItemHandler(h, 6, 129, 46));
             });
         }
     }
@@ -90,7 +89,7 @@ public class BambooMatContainer extends Container {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 7;  // must match TileEntityInventoryBasic.NUMBER_OF_SLOTS
+    private static final int TE_INVENTORY_SLOT_COUNT = 6;  // must match TileEntityInventoryBasic.NUMBER_OF_SLOTS
 
     @Override
     public ItemStack transferStackInSlot(PlayerEntity playerIn, int index) {
