@@ -1,5 +1,6 @@
 package net.ncpbails.culturaldelights.item;
 
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -10,6 +11,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.ncpbails.culturaldelights.CulturalDelights;
+import net.ncpbails.culturaldelights.block.ModBlocks;
 
 public class ModItems {
 
@@ -18,6 +20,10 @@ public class ModItems {
 
     //Items                                                                  item id
     public static final RegistryObject<Item> AVOCADO = ITEMS.register("avocado", () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP)));
+
+    public static final RegistryObject<Item> CUCUMBER_SEEDS = ITEMS.register("cucumber_seeds",
+            () -> new BlockItem(ModBlocks.CUCUMBERS.get(),
+                    new Item.Properties().group(ModItemGroup.CULTURAL_GROUP)));
 
     //Foods
     public static final RegistryObject<Item> CUT_AVOCADO = ITEMS.register("cut_avocado",
@@ -33,6 +39,15 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(1).saturation(0.2f).fastToEat().build() )));
 
     public static final RegistryObject<Item> EGGPLANT = ITEMS.register("eggplant",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(4).saturation(0.8f).build() )));
+
+    public static final RegistryObject<Item> CUT_EGGPLANT = ITEMS.register("cut_eggplant",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(2).saturation(0.4f).build() )));
+
+    public static final RegistryObject<Item> SMOKED_EGGPLANT = ITEMS.register("smoked_eggplant",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(8).saturation(1.4f).build() )));
+
+    public static final RegistryObject<Item> SMOKED_CUT_EGGPLANT = ITEMS.register("smoked_cut_eggplant",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(4).saturation(0.8f).build() )));
 
     public static final RegistryObject<Item> WHITE_EGGPLANT = ITEMS.register("white_eggplant",
