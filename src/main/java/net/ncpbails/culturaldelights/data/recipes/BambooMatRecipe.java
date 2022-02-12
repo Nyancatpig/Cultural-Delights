@@ -5,6 +5,7 @@ import com.google.gson.JsonObject;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.*;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.JSONUtils;
@@ -33,11 +34,23 @@ public class BambooMatRecipe implements IBambooMatRecipe{
     @Override
     public boolean matches(IInventory inv, World worldIn) {
         // Checks for correct focus
-            if(recipeItems.get(0).test(inv.getStackInSlot(0))) {
-                if(recipeItems.get(1).test(inv.getStackInSlot(1))) {
-                    if(recipeItems.get(2).test(inv.getStackInSlot(2))) {
-                        if(recipeItems.get(3).test(inv.getStackInSlot(3))) {
-                            return recipeItems.get(4).test(inv.getStackInSlot(4));
+            if ((inv.getStackInSlot(5).isEmpty())) {
+                    if(recipeItems.get(0).test(inv.getStackInSlot(0))) {
+                        if(recipeItems.get(1).test(inv.getStackInSlot(1))) {
+                            if(recipeItems.get(2).test(inv.getStackInSlot(2))) {
+                                if(recipeItems.get(3).test(inv.getStackInSlot(3))) {
+                                    return recipeItems.get(4).test(inv.getStackInSlot(4));
+                                }
+                            }
+                        }
+                    }
+                } else if ((inv.getStackInSlot(5).isItemEqual(output))) {
+                if(recipeItems.get(0).test(inv.getStackInSlot(0))) {
+                    if(recipeItems.get(1).test(inv.getStackInSlot(1))) {
+                        if(recipeItems.get(2).test(inv.getStackInSlot(2))) {
+                            if(recipeItems.get(3).test(inv.getStackInSlot(3))) {
+                                return recipeItems.get(4).test(inv.getStackInSlot(4));
+                            }
                         }
                     }
                 }
