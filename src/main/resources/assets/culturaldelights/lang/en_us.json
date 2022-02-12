@@ -11,6 +11,8 @@
   "item.culturaldelights.smoked_eggplant": "Smoked Eggplant",
   "item.culturaldelights.cut_eggplant": "Cut Eggplant",
   "item.culturaldelights.smoked_cut_eggplant": "Smoked Cut Eggplant",
+  "item.culturaldelights.corn_cob": "Corn Cob",
+
   "item.culturaldelights.avocado_toast": "Avocado Toast",
   "item.culturaldelights.avocado_sushi": "Avocado Sushi",
   "item.culturaldelights.cucumber_sushi": "Cucumber Sushi",
@@ -33,6 +35,12 @@
   "block.culturaldelights.avocado_wood": "Avocado Wood",
   "block.culturaldelights.avocado_leaves": "Avocado Leaves",
   "block.culturaldelights.avocado_sapling": "Avocado Sapling",
+  "block.culturaldelights.avocado_crate": "Avocado Crate",
+  "block.culturaldelights.cucumber_crate": "Cucumber Crate",
+  "block.culturaldelights.pickle_crate": "Pickle Crate",
+  "block.culturaldelights.corn_cob_crate": "Corn Cob Crate",
+  "block.culturaldelights.eggplant_crate": "Eggplant Crate",
+  "block.culturaldelights.white_eggplant_crate": "White Eggplant Crate",
 
   "screen.culturaldelights.bamboo_mat": "Bamboo Mat"
 }

@@ -53,6 +53,10 @@ public class ModItems {
     public static final RegistryObject<Item> WHITE_EGGPLANT = ITEMS.register("white_eggplant",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(2).saturation(0.4f).build() )));
 
+    public static final RegistryObject<Item> CORN_COB = ITEMS.register("corn_cob",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(3).saturation(0.6f).build() )));
+
+
     public static final RegistryObject<Item> AVOCADO_TOAST = ITEMS.register("avocado_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(8).saturation(1f).build() )));
 

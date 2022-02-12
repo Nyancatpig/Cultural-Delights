@@ -58,6 +58,36 @@ public class ModBlocks {
             () -> new CucumbersBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
 
+    public static final RegistryObject<Block> AVOCADO_CRATE = registerBlock("avocado_crate",
+            () -> new Block(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2f, 3f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CUCUMBER_CRATE = registerBlock("cucumber_crate",
+            () -> new Block(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2f, 3f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> PICKLE_CRATE = registerBlock("pickle_crate",
+            () -> new Block(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2f, 3f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CORN_COB_CRATE = registerBlock("corn_cob_crate",
+            () -> new Block(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2f, 3f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> EGGPLANT_CRATE = registerBlock("eggplant_crate",
+            () -> new Block(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2f, 3f)
+                    .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> WHITE_EGGPLANT_CRATE = registerBlock("white_eggplant_crate",
+            () -> new Block(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2f, 3f)
+                    .sound(SoundType.WOOD)));
+
     //MAKE ITEMS FROM BLOCKS AUTOMATICALLY
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
