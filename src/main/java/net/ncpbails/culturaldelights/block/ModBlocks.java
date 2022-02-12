@@ -12,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.ncpbails.culturaldelights.CulturalDelights;
 import net.ncpbails.culturaldelights.block.custom.BambooMatBlock;
+import net.ncpbails.culturaldelights.block.custom.CornBlock;
 import net.ncpbails.culturaldelights.block.custom.CucumbersBlock;
 import net.ncpbails.culturaldelights.block.custom.WildCropsBlock;
 import net.ncpbails.culturaldelights.block.custom.trees.AvocadoTree;
@@ -56,6 +57,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CUCUMBERS = BLOCKS.register("cucumbers",
             () -> new CucumbersBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
+
+    //public static final RegistryObject<Block> CORN = BLOCKS.register("corn",
+    //        () -> new CornBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
 
     public static final RegistryObject<Block> AVOCADO_CRATE = registerBlock("avocado_crate",
