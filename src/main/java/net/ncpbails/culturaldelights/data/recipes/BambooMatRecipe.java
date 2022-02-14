@@ -3,7 +3,6 @@ package net.ncpbails.culturaldelights.data.recipes;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.*;
@@ -13,8 +12,6 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.registries.ForgeRegistryEntry;
-import net.ncpbails.culturaldelights.block.ModBlocks;
-import net.ncpbails.culturaldelights.item.ModItems;
 
 import javax.annotation.Nullable;
 
@@ -57,6 +54,17 @@ public class BambooMatRecipe implements IBambooMatRecipe{
             }
         return false;
     }
+
+    public int bowlCount(IInventory inv, World worldIn) {
+        // Checks for bowls
+        int bowls = 0;
+        if((inv.getStackInSlot(0)).getItem() == Items.EMERALD) { bowls = bowls + 1; }
+        if((inv.getStackInSlot(1)).getItem() == Items.EMERALD) { bowls = bowls + 1; }
+        if((inv.getStackInSlot(2)).getItem() == Items.EMERALD) { bowls = bowls + 1; }
+        if((inv.getStackInSlot(3)).getItem() == Items.EMERALD) { bowls = bowls + 1; }
+        if((inv.getStackInSlot(4)).getItem() == Items.EMERALD) { bowls = bowls + 1; }
+        return bowls;
+        }
 
     @Override
     public NonNullList<Ingredient> getIngredients() {

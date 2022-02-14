@@ -1,13 +1,16 @@
 package net.ncpbails.culturaldelights.tileentity;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
+import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -19,6 +22,7 @@ import net.ncpbails.culturaldelights.data.recipes.ModRecipeTypes;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class BambooMatTile extends TileEntity implements ITickableTileEntity {
 
@@ -111,6 +115,15 @@ public class BambooMatTile extends TileEntity implements ITickableTileEntity {
         itemHandler.extractItem(2, 1, false);
         itemHandler.extractItem(3, 1, false);
         itemHandler.extractItem(4, 1, false);
+        giveBowls();
+    }
+
+    private void giveBowls() {
+        if(!this.world.isRemote()) {
+            ItemEntity entityToSpawn = new ItemEntity((World) world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.BOWL));
+            entityToSpawn.setPickupDelay((int) 10);
+            world.addEntity(entityToSpawn);
+        }
     }
 
     //private void ingredientTaken() {
