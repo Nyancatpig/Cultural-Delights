@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:diamond",
+    "farmersdelight:milk_bottle",
+    "neapolitan:milk_bottle",
+    "minecraft:potion"
+  ]
+}

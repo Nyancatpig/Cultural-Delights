@@ -2,10 +2,10 @@
   "type": "culturaldelights:mat_rolling",
   "ingredients": [
     {
-      "item": "minecraft:egg"
+      "item": "minecraft:diamond"
     },
     {
-      "item": "minecraft:emerald"
+      "tag": "forge:rollmatout/bowl_foods"
     },
     {
       "item": "minecraft:emerald"
@@ -17,12 +17,7 @@
       "item": "minecraft:emerald"
     }
   ],
-  "output": [
-    {
+  "output": {
     "item": "minecraft:dirt"
-    },
-    {
-      "item": "minecraft:coal"
-    }
-  ]
+  }
 }

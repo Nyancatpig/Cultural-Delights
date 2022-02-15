@@ -3,6 +3,7 @@ package net.ncpbails.culturaldelights.tileentity;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.inventory.Inventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
@@ -12,17 +13,18 @@ import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
 import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.data.ForgeItemTagsProvider;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.ncpbails.culturaldelights.data.recipes.BambooMatRecipe;
 import net.ncpbails.culturaldelights.data.recipes.ModRecipeTypes;
+import net.ncpbails.culturaldelights.util.ModTags;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Optional;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class BambooMatTile extends TileEntity implements ITickableTileEntity {
 
@@ -110,21 +112,29 @@ public class BambooMatTile extends TileEntity implements ITickableTileEntity {
     }
 
     private void outcomeTaken() {
+        giveBowls();
         itemHandler.extractItem(0, 1, false);
         itemHandler.extractItem(1, 1, false);
         itemHandler.extractItem(2, 1, false);
         itemHandler.extractItem(3, 1, false);
         itemHandler.extractItem(4, 1, false);
-        giveBowls();
     }
 
     private void giveBowls() {
-        if(!this.world.isRemote()) {
-            ItemEntity entityToSpawn = new ItemEntity((World) world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.BOWL));
-            entityToSpawn.setPickupDelay((int) 10);
-            world.addEntity(entityToSpawn);
+        Inventory inv = new Inventory(itemHandler.getSlots());
+        Optional<BambooMatRecipe> recipe = world.getRecipeManager().getRecipe(ModRecipeTypes.MAT_ROLLING_RECIPE, inv, world);
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
+
+            if ((itemHandler.getStackInSlot(i).getItem().isIn(ModTags.Items.BOWL_FOODS))) {
+                if(!this.world.isRemote()) {
+                    ItemEntity entityToSpawn = new ItemEntity((World) world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.BOWL));
+                    entityToSpawn.setPickupDelay((int) 10);
+                    world.addEntity(entityToSpawn);
+                }
+            }
         }
     }
+
 
     //private void ingredientTaken() {
     //    itemHandler.extractItem(5, 1, false);

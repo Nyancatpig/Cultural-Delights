@@ -55,16 +55,6 @@ public class BambooMatRecipe implements IBambooMatRecipe{
         return false;
     }
 
-    public int bowlCount(IInventory inv, World worldIn) {
-        // Checks for bowls
-        int bowls = 0;
-        if((inv.getStackInSlot(0)).getItem() == Items.EMERALD) { bowls = bowls + 1; }
-        if((inv.getStackInSlot(1)).getItem() == Items.EMERALD) { bowls = bowls + 1; }
-        if((inv.getStackInSlot(2)).getItem() == Items.EMERALD) { bowls = bowls + 1; }
-        if((inv.getStackInSlot(3)).getItem() == Items.EMERALD) { bowls = bowls + 1; }
-        if((inv.getStackInSlot(4)).getItem() == Items.EMERALD) { bowls = bowls + 1; }
-        return bowls;
-        }
 
     @Override
     public NonNullList<Ingredient> getIngredients() {
