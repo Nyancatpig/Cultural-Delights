@@ -1,0 +1,24 @@
+{
+  "type": "culturaldelights:mat_rolling",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "item": "upgrade_aquatic:lionfish"
+    },
+    {
+      "item": "upgrade_aquatic:lionfish"
+    },
+    {
+      "item": "upgrade_aquatic:lionfish"
+    }
+  ],
+  "output": {
+    "item": "culturaldelights:lionfish_sushi",
+    "count": 4
+  }
+}

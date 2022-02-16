@@ -1,0 +1,24 @@
+{
+  "type": "culturaldelights:mat_rolling",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "item": "culturaldelights:cut_avocado"
+    },
+    {
+      "item": "culturaldelights:cut_avocado"
+    },
+    {
+      "item": "culturaldelights:cut_avocado"
+    }
+  ],
+  "output": {
+    "item": "culturaldelights:avocado_sushi",
+    "count": 4
+  }
+}

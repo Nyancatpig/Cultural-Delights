@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:emerald",
-    "culturaldelights:avocado"
+    "farmersdelight:cooked_rice"
   ]
 }

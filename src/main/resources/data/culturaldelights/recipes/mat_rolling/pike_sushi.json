@@ -1,0 +1,24 @@
+{
+  "type": "culturaldelights:mat_rolling",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "item": "upgrade_aquatic:pike"
+    },
+    {
+      "item": "upgrade_aquatic:pike"
+    },
+    {
+      "item": "upgrade_aquatic:pike"
+    }
+  ],
+  "output": {
+    "item": "culturaldelights:pike_sushi",
+    "count": 4
+  }
+}

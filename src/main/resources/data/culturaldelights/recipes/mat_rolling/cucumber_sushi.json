@@ -1,0 +1,24 @@
+{
+  "type": "culturaldelights:mat_rolling",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "tag": "culturaldelights:cucumbers"
+    },
+    {
+      "tag": "culturaldelights:cucumbers"
+    },
+    {
+      "tag": "culturaldelights:cucumbers"
+    }
+  ],
+  "output": {
+    "item": "culturaldelights:cucumber_sushi",
+    "count": 4
+  }
+}

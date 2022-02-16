@@ -1,0 +1,24 @@
+{
+  "type": "culturaldelights:mat_rolling",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "item": "environmental:koi"
+    },
+    {
+      "item": "environmental:koi"
+    },
+    {
+      "item": "environmental:koi"
+    }
+  ],
+  "output": {
+    "item": "culturaldelights:koi_sushi",
+    "count": 4
+  }
+}

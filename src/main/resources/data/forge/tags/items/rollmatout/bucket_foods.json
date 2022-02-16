@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:coal",
     "minecraft:lava_bucket",
     "minecraft:milk_bucket",
     "minecraft:water_bucket"

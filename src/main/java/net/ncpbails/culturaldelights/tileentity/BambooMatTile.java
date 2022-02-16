@@ -113,6 +113,8 @@ public class BambooMatTile extends TileEntity implements ITickableTileEntity {
 
     private void outcomeTaken() {
         giveBowls();
+        giveBottles();
+        giveBuckets();
         itemHandler.extractItem(0, 1, false);
         itemHandler.extractItem(1, 1, false);
         itemHandler.extractItem(2, 1, false);
@@ -128,6 +130,36 @@ public class BambooMatTile extends TileEntity implements ITickableTileEntity {
             if ((itemHandler.getStackInSlot(i).getItem().isIn(ModTags.Items.BOWL_FOODS))) {
                 if(!this.world.isRemote()) {
                     ItemEntity entityToSpawn = new ItemEntity((World) world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.BOWL));
+                    entityToSpawn.setPickupDelay((int) 10);
+                    world.addEntity(entityToSpawn);
+                }
+            }
+        }
+    }
+
+    private void giveBottles() {
+        Inventory inv = new Inventory(itemHandler.getSlots());
+        Optional<BambooMatRecipe> recipe = world.getRecipeManager().getRecipe(ModRecipeTypes.MAT_ROLLING_RECIPE, inv, world);
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
+
+            if ((itemHandler.getStackInSlot(i).getItem().isIn(ModTags.Items.BOTTLE_FOODS))) {
+                if(!this.world.isRemote()) {
+                    ItemEntity entityToSpawn = new ItemEntity((World) world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.GLASS_BOTTLE));
+                    entityToSpawn.setPickupDelay((int) 10);
+                    world.addEntity(entityToSpawn);
+                }
+            }
+        }
+    }
+
+    private void giveBuckets() {
+        Inventory inv = new Inventory(itemHandler.getSlots());
+        Optional<BambooMatRecipe> recipe = world.getRecipeManager().getRecipe(ModRecipeTypes.MAT_ROLLING_RECIPE, inv, world);
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
+
+            if ((itemHandler.getStackInSlot(i).getItem().isIn(ModTags.Items.BUCKET_FOODS))) {
+                if(!this.world.isRemote()) {
+                    ItemEntity entityToSpawn = new ItemEntity((World) world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.BUCKET));
                     entityToSpawn.setPickupDelay((int) 10);
                     world.addEntity(entityToSpawn);
                 }

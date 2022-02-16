@@ -1,0 +1,24 @@
+{
+  "type": "culturaldelights:mat_rolling",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "tag": "forge:raw_fishes/cod"
+    },
+    {
+      "tag": "forge:raw_fishes/cod"
+    },
+    {
+      "tag": "forge:raw_fishes/cod"
+    }
+  ],
+  "output": {
+    "item": "culturaldelights:cod_sushi",
+    "count": 4
+  }
+}

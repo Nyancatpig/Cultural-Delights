@@ -1,9 +1,7 @@
 {
   "replace": false,
   "values": [
-    "minecraft:diamond",
-    "farmersdelight:milk_bottle",
-    "neapolitan:milk_bottle",
+    "#forge:bottles/milk",
     "minecraft:potion"
   ]
 }
