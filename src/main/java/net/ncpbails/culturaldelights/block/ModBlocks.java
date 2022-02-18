@@ -12,12 +12,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.ncpbails.culturaldelights.CulturalDelights;
 import net.ncpbails.culturaldelights.block.custom.BambooMatBlock;
-import net.ncpbails.culturaldelights.block.custom.CornBlock;
 import net.ncpbails.culturaldelights.block.custom.CucumbersBlock;
-import net.ncpbails.culturaldelights.block.custom.WildCropsBlock;
 import net.ncpbails.culturaldelights.block.custom.trees.AvocadoTree;
 import net.ncpbails.culturaldelights.item.ModItemGroup;
 import net.ncpbails.culturaldelights.item.ModItems;
+import vectorwing.farmersdelight.blocks.WildPatchBlock;
 
 import java.util.function.Supplier;
 
@@ -37,7 +36,7 @@ public class ModBlocks {
                     .sound(SoundType.BAMBOO)));
 
     public static final RegistryObject<Block> WILD_CUCUMBERS = registerBlock("wild_cucumbers",
-            () -> new WildCropsBlock(AbstractBlock.Properties.create(Material.PLANTS)
+            () -> new WildPatchBlock(AbstractBlock.Properties.create(Material.PLANTS)
                     .harvestLevel(0).doesNotBlockMovement().notSolid().setOpaque((bs, br, bp) -> false).hardnessAndResistance(0f)
                     .sound(SoundType.PLANT)));
 
@@ -58,7 +57,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CUCUMBERS = BLOCKS.register("cucumbers",
             () -> new CucumbersBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
-    //public static final RegistryObject<Block> CORN = BLOCKS.register("corn",
+        //public static final RegistryObject<Block> CORN = BLOCKS.register("corn",
     //        () -> new CornBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
 
