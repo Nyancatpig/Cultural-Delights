@@ -2,15 +2,19 @@ buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
         mavenCentral()
+        maven { url = "https://repo.spongepowered.org/repository/maven-public/" }
+        jcenter()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath group: "org.spongepowered", name: "mixingradle", version: "0.7-SNAPSHOT"
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
+apply plugin: "org.spongepowered.mixin"
 
 version = '1.16.5-0.7.3'
 group = 'com.ncpbails.culturaldelights' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -29,9 +33,19 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
+    maven {
+        url = "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven {
+        url = "https://maven.jaackson.me"
+    }
 }
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
+
 minecraft {
     // The mappings can be changed at any time, and must be in the following format.
     // Channel:   Version:
@@ -136,7 +150,8 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.145:api")
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.145")
-
+    implementation fg.deobf("curse.maven:abnormals-core:3457851")
+    implementation fg.deobf("curse.maven:farmersdelight-398521:3503844")
     //compileOnly fg.deobf("curse.maven:farmers-delight-398521:3573686:api")
     //runtimeOnly fg.deobf("curse.maven:farmers-delight-398521:3573686")
 
@@ -165,11 +180,11 @@ jar {
     manifest {
         attributes([
             "Specification-Title": "culturaldelights",
-            "Specification-Vendor": "culturaldelightssareus",
+            "Specification-Vendor": "ncpbails",
             "Specification-Version": "1", // We are version 1 of ourselves
-            "Implementation-Title": project.name,
-            "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"culturaldelightssareus",
+            "Implementation-Title": "culturaldelights",
+            "Implementation-Version": "1.16.5-0.7.3",
+            "Implementation-Vendor" :"ncpbails",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
