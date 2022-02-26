@@ -1,8 +1,14 @@
 package net.ncpbails.culturaldelights.block;
 
+import com.minecraftabnormals.abnormals_core.common.blocks.HedgeBlock;
+import com.minecraftabnormals.abnormals_core.common.blocks.LeafCarpetBlock;
+import com.minecraftabnormals.abnormals_core.common.blocks.chest.AbnormalsChestBlock;
+import com.minecraftabnormals.abnormals_core.common.blocks.chest.AbnormalsTrappedChestBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.trees.OakTree;
+import com.mojang.datafixers.util.Pair;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.ToolType;
@@ -13,6 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.ncpbails.culturaldelights.CulturalDelights;
 import net.ncpbails.culturaldelights.block.custom.BambooMatBlock;
 import net.ncpbails.culturaldelights.block.custom.CucumbersBlock;
+import net.ncpbails.culturaldelights.block.custom.trees.AvocadoPit;
 import net.ncpbails.culturaldelights.block.custom.trees.AvocadoTree;
 import net.ncpbails.culturaldelights.item.ModItemGroup;
 import net.ncpbails.culturaldelights.item.ModItems;
@@ -40,6 +47,11 @@ public class ModBlocks {
                     .harvestLevel(0).doesNotBlockMovement().notSolid().setOpaque((bs, br, bp) -> false).hardnessAndResistance(0f)
                     .sound(SoundType.PLANT)));
 
+    public static final RegistryObject<Block> WILD_CORN = registerBlock("wild_corn",
+            () -> new WildPatchBlock(AbstractBlock.Properties.create(Material.PLANTS)
+                    .harvestLevel(0).doesNotBlockMovement().notSolid().setOpaque((bs, br, bp) -> false).hardnessAndResistance(0f)
+                    .sound(SoundType.PLANT)));
+
     public static final RegistryObject<Block> AVOCADO_LOG = registerBlock("avocado_log",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.JUNGLE_LOG)));
 
@@ -51,11 +63,18 @@ public class ModBlocks {
                     .harvestLevel(0).harvestTool(ToolType.HOE).hardnessAndResistance(0.2f)
                     .sound(SoundType.PLANT).notSolid()));
 
+    public static final RegistryObject<Block> AVOCADO_LEAF_CARPET = registerBlock("avocado_leaf_carpet",
+            () -> new LeafCarpetBlock(AbstractBlock.Properties.from(Blocks.BLACK_CARPET)
+            .sound(SoundType.PLANT).notSolid()));
+
     public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",
             () -> new SaplingBlock(new AvocadoTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> CUCUMBERS = BLOCKS.register("cucumbers",
             () -> new CucumbersBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> AVOCADO_PIT = registerBlock("avocado_pit",
+            () -> new SaplingBlock(new AvocadoPit(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
 
         //public static final RegistryObject<Block> CORN = BLOCKS.register("corn",
     //        () -> new CornBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));

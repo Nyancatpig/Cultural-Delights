@@ -1,0 +1,16 @@
+{
+  "group": "bamboo_mat",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ss"
+  ],
+  "key": {
+    "s": {
+      "item": "culturaldelights:avocado_leaves"
+    }
+  },
+  "result": {
+    "item": "culturaldelights:avocado_leaf_carpet",
+    "count": 2
+  }
+}

@@ -23,9 +23,22 @@ public class ModConfiguredFeatures {
                             new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(new AvocadoBundleTreeDecorator(1))).setIgnoreVines().build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> AVOCADOPIT =
+            register("avocadopit", Feature.TREE.withConfiguration((
+                    new BaseTreeFeatureConfig.Builder(
+                            new SimpleBlockStateProvider(ModBlocks.AVOCADO_SAPLING.get().getDefaultState()),
+                            new SimpleBlockStateProvider(ModBlocks.AVOCADO_SAPLING.get().getDefaultState()),
+                            new AcaciaFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                            new StraightTrunkPlacer(1, 1, 0),
+                            new TwoLayerFeature(1, 0, 1))).build()));
+
     public static final ConfiguredFeature<?, ?> WILD_CUCUMBERS_CONFIG = Feature.FLOWER.withConfiguration((
             new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModBlocks.WILD_CUCUMBERS.get().getDefaultState()), SimpleBlockPlacer.PLACER))
-            .tries(4).build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(3);
+            .tries(1).build()).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(3);
+
+    public static final ConfiguredFeature<?, ?> WILD_CORN_CONFIG = Feature.FLOWER.withConfiguration((
+            new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModBlocks.WILD_CORN.get().getDefaultState()), SimpleBlockPlacer.PLACER))
+            .tries(3).build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(20);
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, key, configuredFeature);

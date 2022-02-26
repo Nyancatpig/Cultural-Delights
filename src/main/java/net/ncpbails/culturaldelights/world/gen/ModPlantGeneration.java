@@ -23,5 +23,11 @@ public class ModPlantGeneration {
 
             base.add(() -> ModConfiguredFeatures.WILD_CUCUMBERS_CONFIG);
         }
+
+        if(types.contains(BiomeDictionary.Type.PLAINS)) {
+            List<Supplier<ConfiguredFeature<?, ?>>> base = event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
+
+            base.add(() -> ModConfiguredFeatures.WILD_CORN_CONFIG);
+        }
     }
 }

@@ -2,7 +2,7 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "culturaldelights:avocado"
+      "item": "culturaldelights:corn_cob"
     }
   ],
   "tool": {
@@ -10,8 +10,8 @@
   },
   "result": [
     {
-      "item": "culturaldelights:cut_avocado",
-      "count": 2
+      "item": "culturaldelights:corn_kernels",
+      "count": 3
     }
   ]
 }
