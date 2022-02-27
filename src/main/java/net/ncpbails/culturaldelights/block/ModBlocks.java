@@ -18,6 +18,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.ncpbails.culturaldelights.CulturalDelights;
 import net.ncpbails.culturaldelights.block.custom.BambooMatBlock;
+import net.ncpbails.culturaldelights.block.custom.CornBlock;
+import net.ncpbails.culturaldelights.block.custom.CornUpperBlock;
 import net.ncpbails.culturaldelights.block.custom.CucumbersBlock;
 import net.ncpbails.culturaldelights.block.custom.trees.AvocadoPit;
 import net.ncpbails.culturaldelights.block.custom.trees.AvocadoTree;
@@ -52,6 +54,11 @@ public class ModBlocks {
                     .harvestLevel(0).doesNotBlockMovement().notSolid().setOpaque((bs, br, bp) -> false).hardnessAndResistance(0f)
                     .sound(SoundType.PLANT)));
 
+    public static final RegistryObject<Block> WILD_EGGPLANTS = registerBlock("wild_eggplants",
+            () -> new WildPatchBlock(AbstractBlock.Properties.create(Material.PLANTS)
+                    .harvestLevel(0).doesNotBlockMovement().notSolid().setOpaque((bs, br, bp) -> false).hardnessAndResistance(0f)
+                    .sound(SoundType.PLANT)));
+
     public static final RegistryObject<Block> AVOCADO_LOG = registerBlock("avocado_log",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.JUNGLE_LOG)));
 
@@ -72,6 +79,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CUCUMBERS = BLOCKS.register("cucumbers",
             () -> new CucumbersBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> CORN = BLOCKS.register("corn",
+            () -> new CornBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> CORN_UPPER = BLOCKS.register("corn_upper",
+            () -> new CornUpperBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
     public static final RegistryObject<Block> AVOCADO_PIT = registerBlock("avocado_pit",
             () -> new SaplingBlock(new AvocadoPit(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));

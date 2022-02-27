@@ -75,11 +75,14 @@ public class CulturalDelights
         RenderTypeLookup.setRenderLayer(ModBlocks.BAMBOO_MAT.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.WILD_CUCUMBERS.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.WILD_CORN.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(ModBlocks.WILD_EGGPLANTS.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.AVOCADO_LEAVES.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.AVOCADO_LEAF_CARPET.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.AVOCADO_SAPLING.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.AVOCADO_PIT.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.CUCUMBERS.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(ModBlocks.CORN.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(ModBlocks.CORN_UPPER.get(), RenderType.getCutoutMipped());
 
 
         ScreenManager.registerFactory(ModContainers.BAMBOO_MAT_CONTAINER.get(), BambooMatScreen::new);

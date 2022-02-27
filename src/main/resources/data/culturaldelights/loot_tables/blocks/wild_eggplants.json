@@ -10,7 +10,7 @@
           "conditions": [
             {
               "condition": "minecraft:random_chance",
-              "chance": 0.5
+              "chance": 0.2
             },
             {
               "condition": "minecraft:inverted",
@@ -22,7 +22,7 @@
               }
             }
           ],
-          "name": "minecraft:wheat_seeds"
+          "name": "culturaldelights:white_eggplant"
         }
       ]
     },
@@ -43,16 +43,10 @@
                   }
                 }
               ],
-              "name": "culturaldelights:wild_corn"
+              "name": "culturaldelights:wild_eggplants"
             },
             {
               "type": "minecraft:item",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.2
-                }
-              ],
               "functions": [
                 {
                   "function": "minecraft:apply_bonus",
@@ -66,7 +60,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "culturaldelights:corn_kernels"
+              "name": "culturaldelights:eggplant_seeds"
             }
           ]
         }

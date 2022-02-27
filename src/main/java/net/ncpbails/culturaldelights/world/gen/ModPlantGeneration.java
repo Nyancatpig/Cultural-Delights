@@ -22,12 +22,19 @@ public class ModPlantGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base = event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
             base.add(() -> ModConfiguredFeatures.WILD_CUCUMBERS_CONFIG);
+            base.add(() -> ModConfiguredFeatures.WILD_EGGPLANTS_CONFIG);
         }
 
         if(types.contains(BiomeDictionary.Type.PLAINS)) {
             List<Supplier<ConfiguredFeature<?, ?>>> base = event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
             base.add(() -> ModConfiguredFeatures.WILD_CORN_CONFIG);
+        }
+
+        if(types.contains(BiomeDictionary.Type.JUNGLE)) {
+            List<Supplier<ConfiguredFeature<?, ?>>> base = event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
+
+            base.add(() -> ModConfiguredFeatures.WILD_EGGPLANTS_CONFIG);
         }
     }
 }

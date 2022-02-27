@@ -25,11 +25,13 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.CUCUMBERS.get(),
                     new Item.Properties().group(ModItemGroup.CULTURAL_GROUP)));
 
+    public static final RegistryObject<Item> CORN_KERNELS = ITEMS.register("corn_kernels",
+            () -> new BlockItem(ModBlocks.CORN.get(),
+                    new Item.Properties().group(ModItemGroup.CULTURAL_GROUP)));
 
-    public static final RegistryObject<Item> CORN_KERNELS = ITEMS.register("corn_kernels", () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP)));
-    //public static final RegistryObject<Item> CORN_KERNELS = ITEMS.register("corn_kernels",
-    //        () -> new BlockItem(ModBlocks.CORN.get(),
-    //                new Item.Properties().group(ModItemGroup.CULTURAL_GROUP)));
+    public static final RegistryObject<Item> EGGPLANT_SEEDS = ITEMS.register("eggplant_seeds",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP)));
+
 
 
     //Foods
