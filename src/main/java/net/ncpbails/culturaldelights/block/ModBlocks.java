@@ -17,10 +17,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.ncpbails.culturaldelights.CulturalDelights;
-import net.ncpbails.culturaldelights.block.custom.BambooMatBlock;
-import net.ncpbails.culturaldelights.block.custom.CornBlock;
-import net.ncpbails.culturaldelights.block.custom.CornUpperBlock;
-import net.ncpbails.culturaldelights.block.custom.CucumbersBlock;
+import net.ncpbails.culturaldelights.block.custom.*;
 import net.ncpbails.culturaldelights.block.custom.trees.AvocadoPit;
 import net.ncpbails.culturaldelights.block.custom.trees.AvocadoTree;
 import net.ncpbails.culturaldelights.item.ModItemGroup;
@@ -80,6 +77,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> CUCUMBERS = BLOCKS.register("cucumbers",
             () -> new CucumbersBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
+    public static final RegistryObject<Block> WHITE_EGGPLANTS = BLOCKS.register("white_eggplants",
+            () -> new WhiteEggplantsBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> EGGPLANTS = BLOCKS.register("eggplants",
+            () -> new EggplantsBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
+
     public static final RegistryObject<Block> CORN = BLOCKS.register("corn",
             () -> new CornBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
@@ -87,7 +90,7 @@ public class ModBlocks {
             () -> new CornUpperBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
     public static final RegistryObject<Block> AVOCADO_PIT = registerBlock("avocado_pit",
-            () -> new SaplingBlock(new AvocadoPit(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
+            () -> new AvocadoPitBlock(new AvocadoPit(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).sound(SoundType.WOOD)));
 
         //public static final RegistryObject<Block> CORN = BLOCKS.register("corn",
     //        () -> new CornBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));

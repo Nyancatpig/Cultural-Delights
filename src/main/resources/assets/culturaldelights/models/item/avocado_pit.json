@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "culturaldelights:block/avocado_pit"
+    "layer0": "culturaldelights:item/avocado_pit"
   }
 }

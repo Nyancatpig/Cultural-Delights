@@ -30,7 +30,12 @@ public class ModItems {
                     new Item.Properties().group(ModItemGroup.CULTURAL_GROUP)));
 
     public static final RegistryObject<Item> EGGPLANT_SEEDS = ITEMS.register("eggplant_seeds",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP)));
+            () -> new BlockItem(ModBlocks.EGGPLANTS.get(),
+                    new Item.Properties().group(ModItemGroup.CULTURAL_GROUP)));
+
+    public static final RegistryObject<Item> WHITE_EGGPLANT_SEEDS = ITEMS.register("white_eggplant_seeds",
+            () -> new BlockItem(ModBlocks.WHITE_EGGPLANTS.get(),
+                    new Item.Properties().group(ModItemGroup.CULTURAL_GROUP)));
 
 
 
@@ -48,19 +53,25 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(1).saturation(0.2f).fastToEat().build() )));
 
     public static final RegistryObject<Item> EGGPLANT = ITEMS.register("eggplant",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(4).saturation(0.8f).build() )));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(4).saturation(0.4f).build() )));
 
     public static final RegistryObject<Item> CUT_EGGPLANT = ITEMS.register("cut_eggplant",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(2).saturation(0.4f).build() )));
 
     public static final RegistryObject<Item> SMOKED_EGGPLANT = ITEMS.register("smoked_eggplant",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(9).saturation(1.4f).build() )));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(9).saturation(.8f).build() )));
+
+    public static final RegistryObject<Item> SMOKED_TOMATO = ITEMS.register("smoked_tomato",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(3).saturation(0.6f).build() )));
 
     public static final RegistryObject<Item> SMOKED_CUT_EGGPLANT = ITEMS.register("smoked_cut_eggplant",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(4).saturation(0.8f).build() )));
 
+    public static final RegistryObject<Item> SMOKED_WHITE_EGGPLANT = ITEMS.register("smoked_white_eggplant",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(4).saturation(0.8f).build() )));
+
     public static final RegistryObject<Item> WHITE_EGGPLANT = ITEMS.register("white_eggplant",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(2).saturation(0.4f).build() )));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(2).saturation(0.3f).build() )));
 
     public static final RegistryObject<Item> CORN_COB = ITEMS.register("corn_cob",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(3).saturation(0.6f).build() )));
@@ -81,8 +92,8 @@ public class ModItems {
     public static final RegistryObject<Item> AVOCADO_TOAST = ITEMS.register("avocado_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(4).saturation(.5f).build() )));
 
-    public static final RegistryObject<Item> SUSHI = ITEMS.register("sushi",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(3).saturation(0.3f).fastToEat().build() )));
+    //public static final RegistryObject<Item> SUSHI = ITEMS.register("sushi",
+    //        () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(3).saturation(0.3f).fastToEat().build() )));
 
     public static final RegistryObject<Item> AVOCADO_SUSHI = ITEMS.register("avocado_sushi",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(3).saturation(0.3f).fastToEat().build() )));

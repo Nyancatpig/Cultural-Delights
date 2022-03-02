@@ -81,6 +81,8 @@ public class CulturalDelights
         RenderTypeLookup.setRenderLayer(ModBlocks.AVOCADO_SAPLING.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.AVOCADO_PIT.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.CUCUMBERS.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(ModBlocks.EGGPLANTS.get(), RenderType.getCutoutMipped());
+        RenderTypeLookup.setRenderLayer(ModBlocks.WHITE_EGGPLANTS.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.CORN.get(), RenderType.getCutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.CORN_UPPER.get(), RenderType.getCutoutMipped());
 
