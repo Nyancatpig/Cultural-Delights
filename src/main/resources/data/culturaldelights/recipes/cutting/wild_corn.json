@@ -2,7 +2,7 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "culturaldelights:corn_cob"
+      "item": "culturaldelights:wild_corn"
     }
   ],
   "tool": {
@@ -13,7 +13,8 @@
       "item": "culturaldelights:corn_kernels"
     },
     {
-      "item": "farmersdelight:straw",
+      "item": "minecraft:wheat_seeds",
+      "count": 2,
       "chance": 0.5
     }
   ]

@@ -2,7 +2,7 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "culturaldelights:corn_cob"
+      "item": "culturaldelights:wild_eggplants"
     }
   ],
   "tool": {
@@ -10,10 +10,11 @@
   },
   "result": [
     {
-      "item": "culturaldelights:corn_kernels"
+      "item": "culturaldelights:white_eggplant"
     },
     {
-      "item": "farmersdelight:straw",
+      "item": "minecraft:light_gray_dye",
+      "count": 2,
       "chance": 0.5
     }
   ]

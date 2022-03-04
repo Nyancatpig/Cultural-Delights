@@ -2,7 +2,7 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "culturaldelights:corn_cob"
+      "item": "culturaldelights:wild_cucumbers"
     }
   ],
   "tool": {
@@ -10,10 +10,11 @@
   },
   "result": [
     {
-      "item": "culturaldelights:corn_kernels"
+      "item": "culturaldelights:cucumber"
     },
     {
-      "item": "farmersdelight:straw",
+      "item": "minecraft:yellow_dye",
+      "count": 2,
       "chance": 0.5
     }
   ]

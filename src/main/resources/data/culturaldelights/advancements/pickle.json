@@ -1,4 +1,5 @@
 {
+  "parent": "farmersdelight:main/craft_knife",
   "display": {
     "icon": {
       "item": "culturaldelights:pickle"
@@ -7,21 +8,24 @@
     "description": "Obtain a pickle through pickling",
     "frame": "task",
     "show_toast": true,
-    "announce_to_chat": true
+    "announce_to_chat": true,
+    "hidden": false
   },
-  "parent": "minecraft:husbandry/root",
   "criteria": {
-    "requirement": {
+    "pickle": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": [
-              "culturaldelights:pickle"
-            ]
+            "item": "culturaldelights:pickle"
           }
         ]
       }
     }
-  }
+  },
+  "requirements": [
+    [
+      "pickle"
+    ]
+  ]
 }
