@@ -62,6 +62,9 @@ public class ModItems {
     public static final RegistryObject<Item> SMOKED_TOMATO = ITEMS.register("smoked_tomato",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(3).saturation(0.6f).build() )));
 
+    public static final RegistryObject<Item> SMOKED_CORN = ITEMS.register("smoked_corn",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(6).saturation(1f).build() )));
+
     public static final RegistryObject<Item> SMOKED_CUT_EGGPLANT = ITEMS.register("smoked_cut_eggplant",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(4).saturation(0.8f).fastToEat().build() )));
 

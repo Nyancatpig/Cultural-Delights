@@ -41,17 +41,17 @@ public class BambooMatRecipe implements IBambooMatRecipe{
                             }
                         }
                     }
-                } else if ((inv.getStackInSlot(5).isItemEqual(output))) {
-                if(recipeItems.get(0).test(inv.getStackInSlot(0))) {
-                    if(recipeItems.get(1).test(inv.getStackInSlot(1))) {
-                        if(recipeItems.get(2).test(inv.getStackInSlot(2))) {
-                            if(recipeItems.get(3).test(inv.getStackInSlot(3))) {
-                                return recipeItems.get(4).test(inv.getStackInSlot(4));
-                            }
-                        }
-                    }
-                }
-            }
+                }// else if ((inv.getStackInSlot(5).isItemEqual(output))) {
+                 // if(recipeItems.get(0).test(inv.getStackInSlot(0))) {
+                 //   if(recipeItems.get(1).test(inv.getStackInSlot(1))) {
+                 //       if(recipeItems.get(2).test(inv.getStackInSlot(2))) {
+                 //           if(recipeItems.get(3).test(inv.getStackInSlot(3))) {
+                 //               return recipeItems.get(4).test(inv.getStackInSlot(4));
+                 //           }
+                 //       }
+                 //   }
+                 //}
+                 //}
         return false;
     }
 
