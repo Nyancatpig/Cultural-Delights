@@ -3,7 +3,6 @@ package net.ncpbails.culturaldelights.tileentity;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.inventory.Inventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
@@ -13,7 +12,6 @@ import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
 import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.data.ForgeItemTagsProvider;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
@@ -51,13 +49,11 @@ public class BambooMatTile extends TileEntity implements ITickableTileEntity {
         return super.write(compound);
     }
 
-
     private ItemStackHandler createHandler() {
         return new ItemStackHandler(7)
         {
             @Override
-            protected void onContentsChanged(int slot) {
-                markDirty();
+            protected void onContentsChanged(int slot){
             }
 
             @Override
@@ -106,9 +102,13 @@ public class BambooMatTile extends TileEntity implements ITickableTileEntity {
         });
     }
 
+
     private void craftTheItem(ItemStack output) {
         itemHandler.insertItem(5, output, false);
-        itemHandler.insertItem(6, output, false);
+    }
+
+    private void removeOutput(ItemStack output) {
+        itemHandler.extractItem(5, 64, false);
     }
 
     private void outcomeTaken() {
@@ -121,6 +121,7 @@ public class BambooMatTile extends TileEntity implements ITickableTileEntity {
         itemHandler.extractItem(3, 1, false);
         itemHandler.extractItem(4, 1, false);
     }
+
 
     private void giveBowls() {
         Inventory inv = new Inventory(itemHandler.getSlots());
