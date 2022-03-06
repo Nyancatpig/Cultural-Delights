@@ -45,10 +45,13 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(2).saturation(0.5f).build() )));
 
     public static final RegistryObject<Item> PICKLE = ITEMS.register("pickle",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(5).saturation(0.9f).build() )));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(4).saturation(0.9f).build() )));
 
     public static final RegistryObject<Item> CUT_CUCUMBER = ITEMS.register("cut_cucumber",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(1).saturation(0.2f).fastToEat().build() )));
+
+    public static final RegistryObject<Item> CUT_PICKLE = ITEMS.register("cut_pickle",
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(2).saturation(0.5f).fastToEat().build() )));
 
     public static final RegistryObject<Item> EGGPLANT = ITEMS.register("eggplant",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(4).saturation(0.4f).build() )));
@@ -57,7 +60,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(2).saturation(0.4f).fastToEat().build() )));
 
     public static final RegistryObject<Item> SMOKED_EGGPLANT = ITEMS.register("smoked_eggplant",
-            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(9).saturation(.8f).build() )));
+            () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(8).saturation(.8f).build() )));
 
     public static final RegistryObject<Item> SMOKED_TOMATO = ITEMS.register("smoked_tomato",
             () -> new Item(new Item.Properties().group(ModItemGroup.CULTURAL_GROUP).food(new Food.Builder().hunger(3).saturation(0.6f).build() )));
