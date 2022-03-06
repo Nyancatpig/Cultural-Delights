@@ -1,9 +1,8 @@
 package net.ncpbails.culturaldelights.block;
 
-import com.minecraftabnormals.abnormals_core.common.blocks.HedgeBlock;
-import com.minecraftabnormals.abnormals_core.common.blocks.LeafCarpetBlock;
-import com.minecraftabnormals.abnormals_core.common.blocks.chest.AbnormalsChestBlock;
-import com.minecraftabnormals.abnormals_core.common.blocks.chest.AbnormalsTrappedChestBlock;
+
+//import com.minecraftabnormals.abnormals_core.common.blocks.LeafCarpetBlock;
+//import com.minecraftabnormals.abnormals_core.core.util.registry.BlockSubRegistryHelper;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -67,9 +66,9 @@ public class ModBlocks {
                     .harvestLevel(0).harvestTool(ToolType.HOE).hardnessAndResistance(0.2f)
                     .sound(SoundType.PLANT).notSolid()));
 
-    public static final RegistryObject<Block> AVOCADO_LEAF_CARPET = registerBlock("avocado_leaf_carpet",
-            () -> new LeafCarpetBlock(AbstractBlock.Properties.from(Blocks.BLACK_CARPET)
-            .sound(SoundType.PLANT).notSolid()));
+    //public static final RegistryObject<Block> AVOCADO_LEAF_CARPET = registerBlock("avocado_leaf_carpet",
+    //        () -> new LeafCarpetBlock(AbstractBlock.Properties.from(Blocks.BLACK_CARPET)
+    //        .sound(SoundType.PLANT).notSolid()));
 
     public static final RegistryObject<Block> AVOCADO_SAPLING = registerBlock("avocado_sapling",
             () -> new SaplingBlock(new AvocadoTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));

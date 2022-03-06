@@ -16,7 +16,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: "org.spongepowered.mixin"
 
-version = '1.16.5-0.7.5'
+version = '1.16.5-0.7.6'
 group = 'com.ncpbails.culturaldelights' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'culturaldelights'
 
@@ -150,7 +150,7 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.145:api")
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.145")
-    implementation fg.deobf("curse.maven:abnormals-core:3457851")
+    //implementation fg.deobf("curse.maven:abnormals-core:3457851")
     implementation fg.deobf("curse.maven:farmersdelight-398521:3573686")
     runtimeOnly fg.deobf("curse.maven:appleskin-248787:3626709")
 
@@ -183,7 +183,7 @@ jar {
             "Specification-Vendor": "ncpbails",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": "culturaldelights",
-            "Implementation-Version": "1.16.5-0.7.5",
+            "Implementation-Version": "1.16.5-0.7.6",
             "Implementation-Vendor" :"ncpbails",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
@@ -208,3 +208,10 @@ publishing {
         }
     }
 }
+
+//[[dependencies.culturaldelights]]
+//    modId = "abnormals_core"
+//    mandatory = true
+//    versionRange = "[3.3.0,)"
+//    ordering = "AFTER"
+//    side = "BOTH"
