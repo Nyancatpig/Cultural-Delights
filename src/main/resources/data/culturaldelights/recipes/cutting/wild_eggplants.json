@@ -13,6 +13,9 @@
       "item": "culturaldelights:white_eggplant"
     },
     {
+      "item": "culturaldelights:white_eggplant_seeds"
+    },
+    {
       "item": "minecraft:light_gray_dye",
       "count": 2,
       "chance": 0.5
