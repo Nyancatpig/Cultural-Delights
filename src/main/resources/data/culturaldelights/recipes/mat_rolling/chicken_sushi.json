@@ -11,14 +11,14 @@
       "tag": "culturaldelights:avocados"
     },
     {
-      "tag": "culturaldelights:avocados"
+      "item": "minecraft:beetroot"
     },
     {
-      "tag": "culturaldelights:avocados"
+      "tag": "forge:cooked_chicken"
     }
   ],
   "output": {
-    "item": "culturaldelights:avocado_sushi",
+    "item": "culturaldelights:chicken_sushi",
     "count": 6
   }
 }

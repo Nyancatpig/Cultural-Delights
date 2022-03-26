@@ -3,10 +3,14 @@ package net.ncpbails.culturaldelights;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.ComposterBlock;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.AxeItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.util.IItemProvider;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,7 +31,11 @@ import net.ncpbails.culturaldelights.screen.BambooMatScreen;
 import net.ncpbails.culturaldelights.tileentity.ModTileEntities;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import vectorwing.farmersdelight.mixin.accessors.ChickenEntityAccessor;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -68,7 +76,52 @@ public class CulturalDelights
                 .put(ModBlocks.AVOCADO_LOG.get(), Blocks.STRIPPED_JUNGLE_LOG)
                 .put(ModBlocks.AVOCADO_WOOD.get(), Blocks.STRIPPED_JUNGLE_WOOD).build();
         });
+
+        event.enqueueWork(() -> {
+            registerCompostables();
+            List<ItemStack> chickenFood = new ArrayList();
+            Collections.addAll(chickenFood, ChickenEntityAccessor.getFoodItems().getMatchingStacks());
+            chickenFood.add(new ItemStack((IItemProvider) ModItems.CUCUMBER_SEEDS.get()));
+            chickenFood.add(new ItemStack((IItemProvider) ModItems.CORN_KERNELS.get()));
+            chickenFood.add(new ItemStack((IItemProvider) ModItems.EGGPLANT_SEEDS.get()));
+            chickenFood.add(new ItemStack((IItemProvider) ModItems.WHITE_EGGPLANT_SEEDS.get()));
+            ChickenEntityAccessor.setFoodItems(Ingredient.fromStacks(chickenFood.stream()));
+        });
     }
+
+        public static void registerCompostables() {
+            // 30% chance
+            ComposterBlock.CHANCES.put(ModItems.CUCUMBER_SEEDS.get(), 0.3F);
+            ComposterBlock.CHANCES.put(ModItems.CORN_KERNELS.get(), 0.3F);
+            ComposterBlock.CHANCES.put(ModItems.EGGPLANT_SEEDS.get(), 0.3F);
+            ComposterBlock.CHANCES.put(ModItems.WHITE_EGGPLANT_SEEDS.get(), 0.3F);
+            ComposterBlock.CHANCES.put(ModBlocks.AVOCADO_PIT.get(), 0.3F);
+
+            // 50% chance
+            ComposterBlock.CHANCES.put(ModItems.CUT_CUCUMBER.get(), 0.65F);
+            ComposterBlock.CHANCES.put(ModItems.CUT_AVOCADO.get(), 0.65F);
+            ComposterBlock.CHANCES.put(ModItems.CUT_EGGPLANT.get(), 0.65F);
+
+            // 65% chance
+            ComposterBlock.CHANCES.put(ModItems.AVOCADO.get(), 0.65F);
+            ComposterBlock.CHANCES.put(ModItems.CUCUMBER.get(), 0.65F);
+            ComposterBlock.CHANCES.put(ModItems.CORN_COB.get(), 0.65F);
+            ComposterBlock.CHANCES.put(ModItems.EGGPLANT.get(), 0.65F);
+            ComposterBlock.CHANCES.put(ModItems.WHITE_EGGPLANT.get(), 0.65F);
+            ComposterBlock.CHANCES.put(ModBlocks.WILD_CUCUMBERS.get(), 0.65F);
+            ComposterBlock.CHANCES.put(ModBlocks.WILD_CORN.get(), 0.65F);
+            ComposterBlock.CHANCES.put(ModBlocks.WILD_EGGPLANTS.get(), 0.65F);
+            ComposterBlock.CHANCES.put(ModBlocks.AVOCADO_LEAVES.get(), 0.65F);
+            ComposterBlock.CHANCES.put(ModBlocks.AVOCADO_SAPLING.get(), 0.65F);
+
+            // 85% chance
+            ComposterBlock.CHANCES.put(ModItems.POPCORN.get(), 0.85F);
+
+            // 100% chance
+            ComposterBlock.CHANCES.put(ModBlocks.AVOCADO_BUNDLE.get(), 0.65F);
+        }
+
+
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
@@ -89,6 +142,8 @@ public class CulturalDelights
 
         ScreenManager.registerFactory(ModContainers.BAMBOO_MAT_CONTAINER.get(), BambooMatScreen::new);
     }
+
+
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {

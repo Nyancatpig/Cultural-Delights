@@ -1,0 +1,24 @@
+{
+  "type": "culturaldelights:mat_rolling",
+  "ingredients": [
+    {
+      "item": "culturaldelights:tortilla"
+    },
+    {
+      "tag": "forge:cooked_beef"
+    },
+    {
+      "tag": "forge:cooked_beef"
+    },
+    {
+      "tag": "culturaldelights:avocados"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    }
+  ],
+  "output": {
+    "item": "culturaldelights:beef_burrito",
+    "count": 2
+  }
+}

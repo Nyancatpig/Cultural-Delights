@@ -8,17 +8,17 @@
       "item": "farmersdelight:cooked_rice"
     },
     {
-      "item": "farmersdelight:cooked_rice"
+      "tag": "culturaldelights:avocados"
     },
     {
-      "item": "minecraft:sweet_berries"
+      "tag": "culturaldelights:cucumbers"
     },
     {
-      "tag": "forge:raw_fishes/salmon"
+      "item": "minecraft:carrot"
     }
   ],
   "output": {
-    "item": "culturaldelights:onigiri",
+    "item": "culturaldelights:vegetable_sushi",
     "count": 6
   }
 }

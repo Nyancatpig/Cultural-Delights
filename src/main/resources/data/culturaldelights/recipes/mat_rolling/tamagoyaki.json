@@ -8,17 +8,17 @@
       "item": "farmersdelight:cooked_rice"
     },
     {
-      "tag": "culturaldelights:cucumbers"
+      "tag": "forge:cooked_eggs"
     },
     {
-      "tag": "culturaldelights:cucumbers"
+      "tag": "forge:cooked_eggs"
     },
     {
-      "tag": "culturaldelights:cucumbers"
+      "tag": "forge:cooked_eggs"
     }
   ],
   "output": {
-    "item": "culturaldelights:cucumber_sushi",
+    "item": "culturaldelights:tamagoyaki",
     "count": 6
   }
 }
