@@ -8,17 +8,17 @@
       "item": "farmersdelight:cooked_rice"
     },
     {
-      "item": "upgrade_aquatic:perch"
+      "item": "minecraft:tropical_fish"
     },
     {
-      "item": "upgrade_aquatic:perch"
+      "item": "minecraft:tropical_fish"
     },
     {
-      "item": "upgrade_aquatic:perch"
+      "item": "minecraft:tropical_fish"
     }
   ],
   "output": {
-    "item": "culturaldelights:perch_sushi",
+    "item": "culturaldelights:tropical_nigiri",
     "count": 6
   }
 }

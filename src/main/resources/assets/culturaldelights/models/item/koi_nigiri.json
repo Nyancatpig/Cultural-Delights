@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "culturaldelights:item/lionfish_sushi"
+    "layer0": "culturaldelights:item/koi_nigiri"
   }
 }

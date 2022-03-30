@@ -8,17 +8,17 @@
       "item": "farmersdelight:cooked_rice"
     },
     {
-      "tag": "forge:raw_fishes/salmon"
+      "item": "upgrade_aquatic:perch"
     },
     {
-      "tag": "forge:raw_fishes/salmon"
+      "item": "upgrade_aquatic:perch"
     },
     {
-      "tag": "forge:raw_fishes/salmon"
+      "item": "upgrade_aquatic:perch"
     }
   ],
   "output": {
-    "item": "culturaldelights:salmon_sushi",
-    "count": 6
+    "item": "culturaldelights:perch_nigiri",
+    "count": 4
   }
 }

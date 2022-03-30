@@ -8,17 +8,17 @@
       "item": "farmersdelight:cooked_rice"
     },
     {
-      "item": "upgrade_aquatic:lionfish"
+      "item": "upgrade_aquatic:pike"
     },
     {
-      "item": "upgrade_aquatic:lionfish"
+      "item": "upgrade_aquatic:pike"
     },
     {
-      "item": "upgrade_aquatic:lionfish"
+      "item": "upgrade_aquatic:pike"
     }
   ],
   "output": {
-    "item": "culturaldelights:lionfish_sushi",
-    "count": 6
+    "item": "culturaldelights:pike_maki",
+    "count": 4
   }
 }

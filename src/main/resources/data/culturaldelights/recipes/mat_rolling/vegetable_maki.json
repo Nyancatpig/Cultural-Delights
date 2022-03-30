@@ -8,17 +8,17 @@
       "item": "farmersdelight:cooked_rice"
     },
     {
-      "tag": "forge:cooked_eggs"
+      "tag": "culturaldelights:avocados"
     },
     {
-      "tag": "forge:cooked_eggs"
+      "tag": "culturaldelights:cucumbers"
     },
     {
-      "tag": "forge:cooked_eggs"
+      "item": "minecraft:carrot"
     }
   ],
   "output": {
-    "item": "culturaldelights:tamagoyaki",
-    "count": 6
+    "item": "culturaldelights:vegetable_maki",
+    "count": 3
   }
 }

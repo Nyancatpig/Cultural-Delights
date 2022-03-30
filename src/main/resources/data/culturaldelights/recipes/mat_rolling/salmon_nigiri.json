@@ -8,17 +8,17 @@
       "item": "farmersdelight:cooked_rice"
     },
     {
-      "item": "environmental:koi"
+      "tag": "forge:raw_fishes/salmon"
     },
     {
-      "item": "environmental:koi"
+      "tag": "forge:raw_fishes/salmon"
     },
     {
-      "item": "environmental:koi"
+      "tag": "forge:raw_fishes/salmon"
     }
   ],
   "output": {
-    "item": "culturaldelights:koi_sushi",
-    "count": 6
+    "item": "culturaldelights:salmon_nigiri",
+    "count": 4
   }
 }

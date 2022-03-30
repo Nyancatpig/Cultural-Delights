@@ -8,17 +8,17 @@
       "item": "farmersdelight:cooked_rice"
     },
     {
-      "item": "minecraft:pufferfish"
+      "tag": "culturaldelights:cucumbers"
     },
     {
-      "item": "minecraft:pufferfish"
+      "item": "minecraft:carrot"
     },
     {
-      "item": "minecraft:pufferfish"
+      "tag": "forge:raw_fishes/cod"
     }
   ],
   "output": {
-    "item": "culturaldelights:pufferfish_sushi",
-    "count": 6
+    "item": "culturaldelights:cod_maki",
+    "count": 3
   }
 }

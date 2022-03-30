@@ -6,11 +6,14 @@
     },
     {
       "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:egg"
     }
   ],
   "result": {
     "item": "farmersdelight:raw_pasta",
-    "count": 2
+    "count": 4
   },
   "experience": 0.2,
   "cookingtime": 200

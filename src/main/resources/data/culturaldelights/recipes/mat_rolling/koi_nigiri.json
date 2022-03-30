@@ -8,17 +8,17 @@
       "item": "farmersdelight:cooked_rice"
     },
     {
-      "tag": "culturaldelights:avocados"
+      "item": "environmental:koi"
     },
     {
-      "tag": "culturaldelights:cucumbers"
+      "item": "environmental:koi"
     },
     {
-      "item": "minecraft:carrot"
+      "item": "environmental:koi"
     }
   ],
   "output": {
-    "item": "culturaldelights:vegetable_sushi",
-    "count": 6
+    "item": "culturaldelights:koi_nigiri",
+    "count": 4
   }
 }

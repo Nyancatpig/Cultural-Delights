@@ -8,17 +8,17 @@
       "item": "farmersdelight:cooked_rice"
     },
     {
-      "tag": "culturaldelights:cucumbers"
+      "tag": "forge:cooked_eggs"
     },
     {
-      "item": "minecraft:carrot"
+      "tag": "forge:cooked_eggs"
     },
     {
-      "tag": "forge:raw_fishes/cod"
+      "tag": "forge:cooked_eggs"
     }
   ],
   "output": {
-    "item": "culturaldelights:cod_sushi",
-    "count": 6
+    "item": "culturaldelights:tamago",
+    "count": 3
   }
 }

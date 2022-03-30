@@ -8,17 +8,17 @@
       "item": "farmersdelight:cooked_rice"
     },
     {
-      "item": "minecraft:tropical_fish"
+      "item": "upgrade_aquatic:lionfish"
     },
     {
-      "item": "minecraft:tropical_fish"
+      "item": "upgrade_aquatic:lionfish"
     },
     {
-      "item": "minecraft:tropical_fish"
+      "tag": "culturaldelights:avocados"
     }
   ],
   "output": {
-    "item": "culturaldelights:tropical_sushi",
-    "count": 6
+    "item": "culturaldelights:lionfish_maki",
+    "count": 3
   }
 }

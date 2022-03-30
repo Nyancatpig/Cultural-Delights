@@ -8,17 +8,17 @@
       "item": "farmersdelight:cooked_rice"
     },
     {
-      "item": "upgrade_aquatic:pike"
+      "item": "minecraft:pufferfish"
     },
     {
-      "item": "upgrade_aquatic:pike"
+      "item": "minecraft:pufferfish"
     },
     {
-      "item": "upgrade_aquatic:pike"
+      "item": "minecraft:pufferfish"
     }
   ],
   "output": {
-    "item": "culturaldelights:pike_sushi",
-    "count": 6
+    "item": "culturaldelights:pufferfish_nigiri",
+    "count": 4
   }
 }
