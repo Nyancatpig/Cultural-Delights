@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "culturaldelights:regular_eggplants"
+    },
+    {
+      "item": "farmersdelight:raw_pasta"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    }
+  ],
+  "result": {
+    "item": "culturaldelights:fried_eggplant_pasta",
+    "count": 1
+  },
+  "experience": 0.2,
+  "cookingtime": 200
+}

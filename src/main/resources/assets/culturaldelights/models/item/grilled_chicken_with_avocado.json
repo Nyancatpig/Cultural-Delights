@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "culturaldelights:item/grilled_chicken_with_avocado"
-  }
-}
