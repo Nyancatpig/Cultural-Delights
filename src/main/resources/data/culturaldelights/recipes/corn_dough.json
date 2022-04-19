@@ -7,7 +7,7 @@
   ],
   "key": {
     "s": {
-      "item": "culturaldelights:corn_cob"
+      "tag": "forge:crops/corn"
     },
     "b": {
       "item": "minecraft:water_bucket"

@@ -14,7 +14,7 @@
       "tag": "forge:crops/onion"
     },
     {
-      "item": "culturaldelights:corn_cob"
+      "tag": "forge:crops/corn"
     }
   ],
   "result": {

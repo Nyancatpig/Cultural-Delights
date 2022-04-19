@@ -16,7 +16,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: "org.spongepowered.mixin"
 
-version = '1.16.5-0.9'
+version = '1.16.5-0.9.1'
 group = 'com.ncpbails.culturaldelights' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'culturaldelights'
 
@@ -183,7 +183,7 @@ jar {
             "Specification-Vendor": "ncpbails",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": "culturaldelights",
-            "Implementation-Version": "1.16.5-0.9",
+            "Implementation-Version": "1.16.5-0.9.1",
             "Implementation-Vendor" :"ncpbails",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])

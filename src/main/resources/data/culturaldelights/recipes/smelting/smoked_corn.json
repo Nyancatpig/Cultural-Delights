@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smoking",
   "ingredient": {
-    "item": "culturaldelights:corn_cob"
+    "tag": "forge:crops/corn"
   },
   "result": "culturaldelights:smoked_corn",
   "experience": 0.35,

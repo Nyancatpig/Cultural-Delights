@@ -24,6 +24,17 @@
                   }
                 }
               ],
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:binomial_with_bonus_count",
+                  "parameters": {
+                    "extra": 3,
+                    "probability": 0.5714286
+                  }
+                }
+              ],
               "name": "culturaldelights:eggplant_seeds"
             },
             {
@@ -76,6 +87,17 @@
                   "block": "culturaldelights:eggplants",
                   "properties": {
                     "age": "5"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:binomial_with_bonus_count",
+                  "parameters": {
+                    "extra": 3,
+                    "probability": 0.5714286
                   }
                 }
               ],

@@ -2,13 +2,13 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "item": "culturaldelights:corn_cob"
+      "tag": "forge:crops/corn"
     },
     {
-      "item": "culturaldelights:corn_cob"
+      "tag": "forge:crops/corn"
     },
     {
-      "item": "culturaldelights:corn_cob"
+      "tag": "forge:crops/corn"
     }
   ],
   "result": {
